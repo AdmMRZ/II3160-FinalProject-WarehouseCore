@@ -27,3 +27,4 @@ Warehouse Core merupakan *supporting subdomain* dalam sistem logistik kami. Serv
 - `GET /api/packages/` - List semua barang
 - `POST /api/packages/` - Tambah barang baru
 - `PATCH /api/packages/<id>/` - Update status & shipping cost
+- `GET /api/packages/<id>/` - Detail suatu barang
