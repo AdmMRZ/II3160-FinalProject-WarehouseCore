@@ -19,7 +19,7 @@ Warehouse Core merupakan *supporting subdomain* dalam sistem logistik kami. Serv
 1. Buat virtual environment: `python -m venv venv`
 2. Aktivasi venv: `source venv/bin/activate` (Linux/Mac) atau `venv\Scripts\activate` (Windows)
 3. Install dependencies: `pip install -r requirements.txt`
-4. Buat file `.env` dan masukkan `API_TOKEN` serta kunci database.
+4. Buat file `.env` dan masukkan `API_TOKEN` serta kunci database `DATABASE_URL`.
 5. Jalankan migrasi: `python manage.py migrate`
 6. Jalankan server: `python manage.py runserver 8000`
 
