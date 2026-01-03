@@ -11,14 +11,13 @@ class PackageRepository:
 
     @staticmethod
     def get_package_by_id(package_id):
-        try:
-            return Package.objects.get(id=package_id)
-        except Package.DoesNotExist:
-            return None
+        return Package.objects.filter(id=package_id).first()
 
     @staticmethod
-    def update_package(package, data):
-        for key, value in data.items():
-            setattr(package, key, value)
-        package.save()
+    def update_package(package_id, data):
+        package = Package.objects.filter(id=package_id).first()
+        if package:
+            for key, value in data.items():
+                setattr(package, key, value)
+            package.save()
         return package
