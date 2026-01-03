@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  warehouse-service:
+    build: .
+    container_name: warehouse_app
+    ports:
+      - "8000:8000"
+    environment:
+      - AUTH_TOKEN=RahasiaTST2026
+    deploy:
+      resources:
+        limits:
+          memory: 512M 
+    restart: always
